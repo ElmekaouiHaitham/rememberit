@@ -12,29 +12,29 @@ const kDefaultDuration = Duration(seconds: 2);
 
 const kDefaultIconSize = 40.0;
 
-List<Widget Function(CardModel, void Function(CardModel, int))>
+List<Widget Function(CardModel, void Function(CardModel, int), List<CardModel>)>
     kQuestionsMaker = [
-  // (card, onReviseFinished) => Writing(
+  // (card, onReviseFinished, _) => Writing(
   //       card: card,
   //       onReviseFinished: onReviseFinished,
   //     ),
-  // (card, onReviseFinished) => MyCard(
+  // (card, onReviseFinished, _) => MyCard(
   //       card: card,
   //       onReviseFinished: onReviseFinished,
   //     ),
-  // (card, onReviseFinished) => Listening(
+  // (card, onReviseFinished, _) => Listening(
   //       card: card,
   //       onReviseFinished: onReviseFinished,
   //     ),
-  // (card, onReviseFinished) => Speaking(
+  // (card, onReviseFinished, _) => Speaking(
   //       card: card,
   //       onReviseFinished: onReviseFinished,
   //     ),
-  (card, onReviseFinished) => PhraseOrdering(
+  (card, onReviseFinished, _) => PhraseOrdering(
         card: card,
         onReviseFinished: onReviseFinished,
       ),
-  (card, onReviseFinished) => WordOrdering(
+  (card, onReviseFinished, _) => WordOrdering(
         card: card,
         onReviseFinished: onReviseFinished,
       ),

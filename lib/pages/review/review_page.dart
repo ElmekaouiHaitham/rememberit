@@ -104,7 +104,7 @@ class _ReviewPageState extends State<ReviewPage> {
                     );
                   }
                   // to show the back as front sometimes and vise versa for better memo
-                  return _generateQuestion(cards[index]);
+                  return _generateQuestion(cards[index], cards);
                 },
               ),
             ),
@@ -127,8 +127,8 @@ class _ReviewPageState extends State<ReviewPage> {
     });
   }
 
-  Widget _generateQuestion(card) {
+  Widget _generateQuestion(card, cards) {
     return kQuestionsMaker[Random().nextInt(kQuestionsMaker.length)](
-        card, _revised);
+        card, _revised, cards);
   }
 }
